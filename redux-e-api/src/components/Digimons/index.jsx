@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import "./style.css"
 
 const Digimons = () => {
 
@@ -6,9 +7,12 @@ const Digimons = () => {
     //ou const digimons = useSelector(store => store.digimons)
     return (
         <>
-        {console.log(digimons)}
             <ul>
-                {digimons.map((e,i)=><li key={i}>{e}</li>)}
+                {digimons.map((e,i)=><li key={i}>
+                    <h3>{e.name}</h3>
+                    <img src={e.img} alt="img"/>
+                    <p>{e.level}</p>
+                    </li>)}
             </ul>
         </>
     )

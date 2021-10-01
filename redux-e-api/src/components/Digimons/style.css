@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+    max-width: 90%;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+ul li{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+ul li img {
+    width: 100%;
+    height: 80%;
+}

@@ -5,7 +5,7 @@ import {addDigimon} from "./actions";
 const addDigimonThunk = (input)=> (dispatch,getState)=> {
 
     axios.get(`https://digimon-api.vercel.app/api/digimon/name/${input}`)
-    .then(resp=>dispatch(addDigimon(resp.data[0].name)))
+    .then(resp=>dispatch(addDigimon({name:resp.data[0].name,img:resp.data[0].img,level:resp.data[0].level})))
     .catch(err=>console.log(err))
     /*const {digimon}= getState();
 
